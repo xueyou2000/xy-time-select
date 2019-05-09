@@ -10,37 +10,46 @@
 
 # xy-time-select
 
-基于`React Hooks` + `typescript`的基础组件
+时间选择器组件组件, 可从下拉列表选择时间，也可以直接输入
 
 ## 安装
 
 ```bash
 # yarn
-yarn add xy-time-select
+yarn add xy-time-select xy-autocomplete xy-input utils-hooks utils-dom xy-empty xy-select classnames @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 ```
 
 ## 使用例子
 
-```ts
+```tsx
 import React from "react";
 import ReactDOM from "react-dom";
-import XyTimeSelect from "xy-time-select";
-ReactDOM.render(<XyTimeSelect />, container);
+import TimeSelect from "xy-time-select";
+ReactDOM.render(<TimeSelect />, container);
 ```
 
 ## API
 
-| 属性     | 说明                                                               | 类型           | 默认值    |
-| -------- | ------------------------------------------------------------------ | -------------- | --------- |
-| ghost    | 幽灵属性，使按钮背景透明                                           | boolean        | false     |
-| long     | 是否长按钮                                                         | boolean        | false     |
-| icon     | 设置按钮的图标类型                                                 | IconDefinition | -         |
-| loading  | 设置按钮载入状态                                                   | boolean        | `false`   |
-| disabled | 按钮失效状态                                                       | boolean        | `false`   |
-| shape    | 设置按钮形状，可选值为 `circle` 或者不设                           | string         | -         |
-| size     | 设置按钮大小，可选值为 `small` `large` 或者不设                    | string         | `default` |
-| type     | 设置按钮类型，可选值为 `primary` `dashed` `text` `danger` 或者不设 | string         | -         |
-| onClick  | `click` 事件的 handler                                             | function       | -         |
+| 属性           | 说明                                        | 类型                                        | 默认值  |
+| -------------- | ------------------------------------------- | ------------------------------------------- | ------- |
+| disabled       | 是否禁用                                    | boolean                                     | false   |
+| value          | 输入框值, 比如 01:00                        | string                                      | 无      |
+| defaultValue   | 输入框默认值                                | string                                      | 无      |
+| placeholder    | 占位符文本                                  | string                                      | 无      |
+| autoFocus      | 自动焦点                                    | boolean                                     | 无      |
+| onChange       | 输入框 change 事件                          | (value: string) => void                     | 无      |
+| popupClassName | 弹出内容类名                                | string                                      | 无      |
+| stretch        | 下拉列表是否宽度与输入框宽度对齐            | boolean                                     | true    |
+| backfill       | 是否键盘输入完再回填                        | boolean                                     | false   |
+| delay          | 防抖毫秒                                    | number                                      | 200     |
+| dataSource     | 数据源                                      | OptionConfig[] / string[] / React.ReactNode | 无      |
+| customItem     | 自定义渲染                                  | (props: CustomItemProps) => JSX.Element     | 无      |
+| onChange       | 改变回调                                    | (value: string) => void                     | 无      |
+| start          | 开始时间,时间选择器开始时间范围, 比如 09:00 | string                                      | "00:00" |
+| end            | 结束时间,时间选择器开始时间范围, 比如 18:00 | string                                      | "23:59" |
+| step           | 间隔时间                                    | string                                      | "00:30" |
+| min            | 最小可选时间                                | string                                      | 无      |
+| max            | 最大可选时间                                | string                                      | 无      |
 
 ## 开发
 

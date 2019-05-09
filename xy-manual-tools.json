@@ -1,7 +1,32 @@
 [
     {
         "name": "Simple",
-        "title": "简答例子",
-        "desc": "简答例子的一段描述。"
+        "title": "基本例子",
+        "desc": "默认可选时间为 00:00 ~ 23:59, 间隔为 30 秒。"
+    },
+    {
+        "name": "LimitRange",
+        "title": "限制范围",
+        "desc": "限制可选的区域, 比如上班时间, 只能在某个区间内选择。"
+    },
+    {
+        "name": "TimeRange",
+        "title": "时间范围",
+        "desc": "规定起始时间和结束时间。"
+    },
+    {
+        "name": "Linkage",
+        "title": "联动",
+        "desc": "2个时间选择器的联动，一个作为开始时间，一个作为结束时间。"
+    },
+    {
+        "name": "DataSource",
+        "title": "设置DataSource",
+        "desc": "主动设置数据源，而不是根据范围生成。"
+    },
+    {
+        "name": "Disabled",
+        "title": "禁用状态",
+        "desc": "设置 disabled 属性显示禁用状态。"
     }
 ]
