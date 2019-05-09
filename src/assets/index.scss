@@ -2,4 +2,9 @@ $TimeSelect: "xy-time-select";
 
 .#{$TimeSelect}_icon {
     color: #ccc;
+
+    &:hover {
+        color: #666;
+        cursor: pointer;
+    }
 }

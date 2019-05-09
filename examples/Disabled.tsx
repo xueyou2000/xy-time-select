@@ -4,7 +4,7 @@ import TimeSelect from "../src";
 export default function() {
     return (
         <div>
-            <TimeSelect disabled={true} />
+            <TimeSelect style={{ width: "160px" }} disabled={true} />
         </div>
     );
 }

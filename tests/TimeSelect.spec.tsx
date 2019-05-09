@@ -71,4 +71,28 @@ describe("TimeSelect", () => {
         expect(fn.mock.calls.length).toBe(3);
         expect(fn.mock.calls[2][0]).toBe("11:00");
     });
+
+    test("onBlur", () => {
+        const fn = jest.fn();
+        const wrapper = render(<TimeSelect placeholder="请选择时间" onBlur={fn} />);
+        const input = wrapper.getByPlaceholderText("请选择时间") as HTMLInputElement;
+
+        expect(fn.mock.calls.length).toBe(0);
+        fireEvent.blur(input);
+        expect(fn.mock.calls.length).toBe(1);
+    });
+
+    test("clean", () => {
+        const fn = jest.fn();
+        const wrapper = render(<TimeSelect defaultValue="12:30" placeholder="请选择时间" onChange={fn} />);
+        const input = wrapper.getByPlaceholderText("请选择时间") as HTMLInputElement;
+        expect(input.value).toBe("12:30");
+
+        const cleanBtn = wrapper.container.querySelector(".xy-time-select_icon");
+        fireEvent.click(cleanBtn);
+
+        expect(input.value).toBe("");
+        expect(fn.mock.calls.length).toBe(1);
+        expect(fn.mock.calls[0][0]).toBe("");
+    });
 });

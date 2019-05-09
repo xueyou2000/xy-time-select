@@ -6,7 +6,7 @@ export default function() {
 
     return (
         <div>
-            <TimeSelect dataSource={dataSource} />
+            <TimeSelect style={{ width: "160px" }} dataSource={dataSource} />
         </div>
     );
 }

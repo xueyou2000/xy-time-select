@@ -8,10 +8,10 @@ export default function() {
     return (
         <div>
             <p>开始时间</p>
-            <TimeSelect max={max} onChange={setMin} />
+            <TimeSelect style={{ width: "160px" }} max={max} onChange={setMin} />
 
             <p>结束时间</p>
-            <TimeSelect min={min} onChange={setMax} />
+            <TimeSelect style={{ width: "160px" }} min={min} onChange={setMax} />
         </div>
     );
 }

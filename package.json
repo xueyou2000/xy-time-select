@@ -1,6 +1,6 @@
 {
     "name": "xy-time-select",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "基于 React Hooks 的时间选择器组件",
     "types": "es/index.d.ts",
     "main": "es/index.js",
@@ -46,12 +46,13 @@
     },
     "dependencies": {
         "@fortawesome/free-regular-svg-icons": "^5.8.2",
+        "@fortawesome/free-solid-svg-icons": "^5.8.2",
         "@fortawesome/react-fontawesome": "^0.1.4",
         "classnames": "^2.2.6",
         "react": "^16.8.2",
         "react-dom": "^16.8.2",
-        "utils-hooks": "0.0.66",
-        "xy-autocomplete": "0.0.8",
+        "utils-hooks": "0.0.67",
+        "xy-autocomplete": "0.0.9",
         "xy-input": "^0.0.9"
     },
     "repository": {
