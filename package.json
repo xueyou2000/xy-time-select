@@ -1,6 +1,6 @@
 {
     "name": "xy-time-select",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "基于 React Hooks 的时间选择器组件",
     "types": "es/index.d.ts",
     "main": "es/index.js",
@@ -61,7 +61,7 @@
     },
     "jest": {
         "transformIgnorePatterns": [
-            "<rootDir>/node_modules/(?!(utils-hooks|utils-dom|xy-select|xy-empty|xy-autocomplete|xy-input))"
+            "<rootDir>/node_modules/(?!(utils-hooks|utils-dom|xy-select|xy-trigger|xy-empty|xy-autocomplete|xy-input))"
         ]
     }
 }
