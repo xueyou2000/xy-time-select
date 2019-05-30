@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { DefineDefaultValue } from "utils-hooks";
-import { isShortTime } from "./date";
+import { isShortTime } from "utils-dom";
 import { TimeSelectProps } from "./interface";
 
 export default function useValue(props: TimeSelectProps): [string, React.Dispatch<React.SetStateAction<string>>, (val: string) => void] {

@@ -1,6 +1,6 @@
 {
     "name": "xy-time-select",
-    "version": "0.0.4",
+    "version": "0.0.41",
     "description": "基于 React Hooks 的时间选择器组件",
     "types": "es/index.d.ts",
     "main": "es/index.js",
@@ -51,6 +51,7 @@
         "classnames": "^2.2.6",
         "react": "^16.8.2",
         "react-dom": "^16.8.2",
+        "utils-dom": "0.0.70",
         "utils-hooks": "0.0.71",
         "xy-autocomplete": "0.0.91",
         "xy-input": "0.0.91"

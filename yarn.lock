@@ -8396,6 +8396,11 @@ utils-dom@0.0.66:
   resolved "https://registry.npm.taobao.org/utils-dom/download/utils-dom-0.0.66.tgz#2085f76e5de1cbaf7b7559e176da43547ad825d0"
   integrity sha1-IIX3bl3hy697dVnhdtpDVHrYJdA=
 
+utils-dom@0.0.70:
+  version "0.0.70"
+  resolved "https://registry.npm.taobao.org/utils-dom/download/utils-dom-0.0.70.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Futils-dom%2Fdownload%2Futils-dom-0.0.70.tgz#0c2a8a9d3224baa9f008eccecc35645ed431ffd5"
+  integrity sha1-DCqKnTIkuqnwCOzOzDVkXtQx/9U=
+
 utils-hooks@0.0.63:
   version "0.0.63"
   resolved "https://registry.npm.taobao.org/utils-hooks/download/utils-hooks-0.0.63.tgz#067c90e9f9278291e841d1a0a85b9e0733275fe3"

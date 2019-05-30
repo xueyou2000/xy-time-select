@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.41 (Thu May 30 2019)
+
+-   剥离`date`工具函数到`utils-dom`外部库中
+
 ## 0.0.4 (Mon May 13 2019)
 
 -   更新依赖

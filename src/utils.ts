@@ -1,5 +1,5 @@
 import { TimeSelectProps } from "./interface";
-import { formatDate, isShortTime, shortTimeParse, shrotTimeTimestamp } from "./date";
+import { formatDate, isShortTime, shortTimeParse, shrotTimeTimestamp } from "utils-dom";
 import { OptionConfig } from "xy-select/es/interface";
 
 const LAST_SECOND = "23:59";
