@@ -16,7 +16,7 @@
 
 ```bash
 # yarn
-yarn add xy-time-select xy-autocomplete xy-input utils-hooks utils-dom xy-empty xy-select classnames @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+yarn add xy-time-select
 ```
 
 ## 使用例子
