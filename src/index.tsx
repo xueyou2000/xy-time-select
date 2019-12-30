@@ -9,15 +9,15 @@ import { Input } from "xy-input";
 import "xy-input/assets/index.css";
 import { OptionConfig } from "xy-select/es/interface";
 import { TimeSelectProps } from "./interface";
+import { getLocal } from "./local";
 import useValue from "./useValue";
 import { createTimeList } from "./utils";
 
 export const TimeSelect = React.forwardRef((props: TimeSelectProps, ref: React.MutableRefObject<any>) => {
-    const { value, defaultValue, start, end, step = "00:30", min, max, placeholder = "请选择时间", onBlur, onChange, ...rest } = props;
+    const { value, defaultValue, start, end, step = "00:30", min, max, placeholder = getLocal().TimeSelect.placeholder, onBlur, onChange, ...rest } = props;
     const [inputValue, setInputValue, changeValue] = useValue(props);
     const times: OptionConfig[] | string[] | React.ReactNode = createTimeList(props);
     const [iconRef, iconHouver] = useHover();
-    // console.log(times);
 
     function blurHandle(event: React.FocusEvent<HTMLInputElement>) {
         changeValue(event.target.value);
@@ -33,17 +33,7 @@ export const TimeSelect = React.forwardRef((props: TimeSelectProps, ref: React.M
     }
 
     return (
-        <AutoComplete
-            {...rest}
-            ref={ref}
-            filter={null}
-            placeholder={placeholder}
-            dataSource={times}
-            value={inputValue}
-            onSelect={changeValue}
-            onChange={setInputValue}
-            onBlur={blurHandle}
-        >
+        <AutoComplete {...rest} ref={ref} filter={null} placeholder={placeholder} dataSource={times} value={inputValue} onSelect={changeValue} onChange={setInputValue} onBlur={blurHandle}>
             <Input
                 suffix={
                     <span className="xy-time-select_icon" onClick={cleanHandle} ref={iconRef}>
